@@ -26,17 +26,17 @@ const NavButtons = styled.nav`
   gap: 8px;
   grid-column: 8 / span 5;
   justify-content: flex-end;
-  button {
+  button, > a > span {
     height: 50px;
   }
   @media only screen and (max-width: 1176px) {
     gap: 4px;
-    grid-column: 6 / span 7;
-    button {
-      height: 40px;
-      font-size: 16px;
-      padding-left: 16px;
-      padding-right: 16px;
+    grid-column: 7 / span 6;
+    button, > a > span {
+      height: 36px !important;
+      font-size: 13px !important;
+      padding-left: 8px !important;
+      padding-right: 8px !important;
     }
   }
 `;
@@ -44,7 +44,7 @@ const NavButtons = styled.nav`
 const LogoLink = styled.div`
   grid-column: 1 / span 4;
   @media only screen and (max-width: 1176px) {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 5;
   }
 `;
 
