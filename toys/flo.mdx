@@ -1,0 +1,52 @@
+---
+title: "FLO (Field-based Traffic Model)"
+subtitle: "Emergence & Continuum Methods"
+period: "2024–2025"
+status: "Present"
+tags: ["Simulation", "Traffic Modeling", "Python", "Continuum Methods", "FMM"]
+abstract: "FLO is a continuum crowds inspired traffic model that demonstrates emergent lane formation and realistic congestion negotiation as seen in chaotic traffic."
+isPublished: true
+publishedOn: "2025-12-29"
+layout: "Toy"
+heroImg: ""
+heroImgAlt: ""
+seoTitle: "FLO — Field-based Traffic Simulator | Danish Haroon"
+---
+
+## Overview
+
+FLO models traffic as continuous vector fields (curb/median repulsion, goal attraction, inter-vehicle discomfort) combined with bicycle-model vehicles. Local interactions produce global structure — lanes and predictable flows — without explicit lane rules.
+
+## Key Results (concise)
+
+- **Lane Formation Index:** 1.000 (Following) — perfect self-organization  
+- **Trajectory Entropy:** 0.174 (Chaotic) — low unpredictability; structure emerges from conflict  
+- **Stoppage Frequency:** 97.8% (Merging) — realistic bottleneck behavior
+
+These metrics show: emergence works, traffic is not random, and the model reproduces realistic congestion.
+
+## Visualization
+
+- Real-time plots and ffmpeg-backed animations (matplotlib + FuncAnimation)
+- Field visualization (quiver), vehicle trajectories, and per-frame snapshots for presentations
+
+## Implementation Details
+
+- Core: Python (NumPy, SciPy)
+- Simulation: custom continuum field + bicycle vehicle controller
+- Visualization: Matplotlib (animation to MP4)
+- Experiment scripts: scenario definitions, metric logging, and plot generation
+
+## Future Work
+
+- Implement Fast Sweeping (O(m)) to replace FMM for linear-time field solve  
+- GPU acceleration for large-scale, real-time simulations  
+- Validate against real-world trajectory datasets (e.g., NGSIM)  
+- Add curved roads, intersections, traffic lights, and richer driver models
+
+## Links
+
+- Repository: 
+- Animation: 
+
+p.s this is my fyp, marked in highest in the entire cs batch in FYP-1 evaluation. :3

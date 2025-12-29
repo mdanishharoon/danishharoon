@@ -7,12 +7,32 @@ import Monitor from "./Monitor";
 import T from "./UI/Typography";
 import { HStack, VStack } from "./UI/Stack";
 import windowsWallpaper from "../public/windows-wallpaper.png";
+
+const EasterEggText = styled.span`
+  font-size: 11px;
+  color: #888;
+  cursor: default;
+  user-select: none;
+  margin-top: 4px;
+  &:hover {
+    color: #666;
+  }
+`;
+
 const HeroMain = () => {
   const removeBalloonsRef = React.useRef<() => void | null>(null);
+  const [clickCount, setClickCount] = React.useState(0);
 
   const releaseBalloons = () => {
     removeBalloonsRef.current?.();
     removeBalloonsRef.current = balloons();
+
+    // Easter egg: redirect to 404 after 3 clicks
+    const newCount = clickCount + 1;
+    setClickCount(newCount);
+    if (newCount >= 3) {
+      window.location.href = "/i-told-you-so";
+    }
   };
 
   React.useEffect(() => {
@@ -56,11 +76,14 @@ const HeroMain = () => {
             <br /> figuring out the edges of <T.Rainbow title="whats possible">whats possible</T.Rainbow>
           </T.H1>
           <HStack gap={16}>
-            <LinkCTAButton primary href="/blog">
-              Read my blog
+            <LinkCTAButton primary href="/projects">
+              View Projects
             </LinkCTAButton>
             <CTAButton onClick={releaseBalloons}>Release balloons</CTAButton>
           </HStack>
+          <EasterEggText>
+            don&apos;t release too many balloons
+          </EasterEggText>
         </HeroText>
       </Grid>
     </Wrapper>

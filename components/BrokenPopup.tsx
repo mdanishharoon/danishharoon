@@ -101,7 +101,7 @@ const BrokenPopup = () => {
           <Window style={{ width: "100%", height: "100%" }} shadow={false}>
             <WindowHeader>Critical error</WindowHeader>
             <WindowContent>
-              Something went really fucking wrong right now.
+              Something went really fucking wrong right now. your fault.
               <Button
                 style={{
                   width: 120,
@@ -121,7 +121,7 @@ const BrokenPopup = () => {
           <Window style={{ width: "100%", height: "100%" }} shadow={false}>
             <WindowHeader>Critical error</WindowHeader>
             <WindowContent>
-              Something went really fucking wrong right now.
+              Something went really fucking wrong right now. your fault.
               <Button
                 style={{
                   width: 120,
