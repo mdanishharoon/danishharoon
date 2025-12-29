@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import balloons from "./balloons";
 import CTAButton, { LinkCTAButton } from "./UI/CTAButton";
 import { Grid } from "./Layout";
@@ -7,6 +7,67 @@ import Monitor from "./Monitor";
 import T from "./UI/Typography";
 import { HStack, VStack } from "./UI/Stack";
 import windowsWallpaper from "../public/windows-wallpaper.png";
+
+const PHRASES = [
+  "am figuring stuff out",
+  "am waiting on my AWS CCP exam voucher",
+  "am making pixels behave... mostly",
+  "am breaking things(cursor is) and calling it learning",
+  "am probably debugging (using cursor)",
+  "am asking 'what if?' way too often",
+  "am convinced AI will take my job... ",
+  "think inspiration has no schedule",
+];
+
+const useTypewriter = (phrases: string[], typingSpeed = 80, deletingSpeed = 40, pauseDuration = 2000) => {
+  const [displayText, setDisplayText] = React.useState("");
+  const [phraseIndex, setPhraseIndex] = React.useState(0);
+  const [isDeleting, setIsDeleting] = React.useState(false);
+
+  React.useEffect(() => {
+    const currentPhrase = phrases[phraseIndex];
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (displayText.length < currentPhrase.length) {
+          setDisplayText(currentPhrase.slice(0, displayText.length + 1));
+        } else {
+          // Finished typing, pause then start deleting
+          setTimeout(() => setIsDeleting(true), pauseDuration);
+        }
+      } else {
+        // Deleting
+        if (displayText.length > 0) {
+          setDisplayText(displayText.slice(0, -1));
+        } else {
+          // Finished deleting, move to next phrase
+          setIsDeleting(false);
+          setPhraseIndex((prev) => (prev + 1) % phrases.length);
+        }
+      }
+    }, isDeleting ? deletingSpeed : typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, phraseIndex, phrases, typingSpeed, deletingSpeed, pauseDuration]);
+
+  return displayText;
+};
+
+const blink = keyframes`
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+`;
+
+const Cursor = styled.span`
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: currentColor;
+  margin-left: 2px;
+  animation: ${blink} 1s infinite;
+  vertical-align: text-bottom;
+`;
 
 const EasterEggText = styled.span`
   font-size: 11px;
@@ -22,6 +83,7 @@ const EasterEggText = styled.span`
 const HeroMain = () => {
   const removeBalloonsRef = React.useRef<() => void | null>(null);
   const [clickCount, setClickCount] = React.useState(0);
+  const typedText = useTypewriter(PHRASES);
 
   const releaseBalloons = () => {
     removeBalloonsRef.current?.();
@@ -72,8 +134,19 @@ const HeroMain = () => {
         {/* <BrokenPopup /> */}
         <HeroText>
           <T.H1>
-            Hi, I&apos;m Danish Haroon.
-            <br /> figuring out the edges of <T.Rainbow title="whats possible">whats possible</T.Rainbow>
+            Hi, I&apos;m Danish Haroon. and I
+            <br />
+            <TypewriterWrapper>
+              {/* Invisible placeholder to reserve space for longest phrase */}
+              <TypewriterPlaceholder aria-hidden="true">
+                {PHRASES.reduce((a, b) => a.length > b.length ? a : b)}
+              </TypewriterPlaceholder>
+              {/* Actual typed text positioned on top */}
+              <TypewriterText>
+                {typedText}
+                <Cursor />
+              </TypewriterText>
+            </TypewriterWrapper>
           </T.H1>
           <HStack gap={16}>
             <LinkCTAButton primary href="/projects">
@@ -89,6 +162,22 @@ const HeroMain = () => {
     </Wrapper>
   );
 };
+
+const TypewriterWrapper = styled.span`
+  display: block;
+  position: relative;
+`;
+
+const TypewriterPlaceholder = styled.span`
+  visibility: hidden;
+  display: block;
+`;
+
+const TypewriterText = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
 
 export default HeroMain;
 
