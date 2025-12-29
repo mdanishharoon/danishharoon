@@ -75,6 +75,13 @@ const Footer = () => {
               >
                 LinkedIn
               </Anchor>
+              <Anchor
+                href="https://www.upwork.com/freelancers/~01b9a46df790944107"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Upwork
+              </Anchor>
             </Links>
           </Grid>
         </Center>

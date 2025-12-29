@@ -41,8 +41,8 @@ const NavButtons = styled.nav`
 `;
 
 const pages = [
-  { name: "Projects", href: "/toys" },
-  { name: "Experience", href: "/blog" },
+  { name: "Projects", href: "/projects" },
+  { name: "Experience", href: "/experience" },
 ];
 
 const Navbar = () => {
