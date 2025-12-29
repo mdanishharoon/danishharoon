@@ -31,12 +31,20 @@ const NavButtons = styled.nav`
   }
   @media only screen and (max-width: 1176px) {
     gap: 4px;
+    grid-column: 6 / span 7;
     button {
       height: 40px;
       font-size: 16px;
       padding-left: 16px;
       padding-right: 16px;
     }
+  }
+`;
+
+const LogoLink = styled.div`
+  grid-column: 1 / span 4;
+  @media only screen and (max-width: 1176px) {
+    grid-column: 1 / span 4;
   }
 `;
 
@@ -52,9 +60,11 @@ const Navbar = () => {
     <AppBar variant="window">
       <Center>
         <Grid style={{ alignItems: "center" }}>
-          <Link href="/">
-            <ExpensiveToys />
-          </Link>
+          <LogoLink>
+            <Link href="/">
+              <ExpensiveToys />
+            </Link>
+          </LogoLink>
 
           <NavButtons>
             {pages.map((page) => (

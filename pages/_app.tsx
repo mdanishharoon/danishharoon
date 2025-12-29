@@ -59,6 +59,27 @@ const isDevelopment = process.env.NODE_ENV === "development";
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
 
+  // Global click sound effect for all buttons and links
+  React.useEffect(() => {
+    const clickSound = new Audio('/sounds/click_06.wav');
+    clickSound.volume = 1.0;
+
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      // Check if clicked element or its parent is a button, link, or clickable element
+      const isClickable = target.closest('button, a, [role="button"], input[type="submit"]');
+      if (isClickable) {
+        // Clone and play to allow overlapping sounds
+        const sound = clickSound.cloneNode() as HTMLAudioElement;
+        sound.volume = 1.0;
+        sound.play().catch(() => { }); // Ignore autoplay errors
+      }
+    };
+
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, []);
+
   React.useEffect(() => {
     if (isDevelopment) return;
     const handleRouteChange = (url: string) => {
