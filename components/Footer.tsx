@@ -9,10 +9,7 @@ import { SITE_URL } from "../utils";
 
 const StyledFooter = styled(Frame)`
   width: 100%;
-  padding: 0;
   padding: 16px 0px;
-  position: sticky;
-  top: 100vh;
 
   @media only screen and (max-width: 1176px) {
     padding: 16px;
