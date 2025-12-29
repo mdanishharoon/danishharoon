@@ -55,32 +55,25 @@ const Footer = () => {
             </LogoWrapper>
             <Links>
               <Anchor
-                href="https://twitter.com/artur_bien"
+                href="https://x.com/danishhharoon"
                 target="_blank"
                 rel="noreferrer"
               >
-                Twitter
+                X
               </Anchor>
               <Anchor
-                href="https://github.com/arturbien"
+                href="https://github.com/mdanishharoon"
                 target="_blank"
                 rel="noreferrer"
               >
                 GitHub
               </Anchor>
               <Anchor
-                href="https://www.linkedin.com/in/arturbien/"
+                href="https://linkedin.com/in/mdanishh"
                 target="_blank"
                 rel="noreferrer"
               >
                 LinkedIn
-              </Anchor>
-              <Anchor
-                href={SITE_URL + "/rss.xml"}
-                target="_blank"
-                rel="noreferrer"
-              >
-                RSS
               </Anchor>
             </Links>
           </Grid>

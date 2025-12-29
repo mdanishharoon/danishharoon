@@ -52,9 +52,8 @@ const HeroMain = () => {
         {/* <BrokenPopup /> */}
         <HeroText>
           <T.H1>
-            Hi, I&apos;m Artur Bień.
-            <br /> I build <T.Rainbow title="quality">quality</T.Rainbow> UIs
-            for fun.
+            Hi, I&apos;m Danish Haroon.
+            <br /> figuring out the edges of <T.Rainbow title="whats possible">whats possible</T.Rainbow>
           </T.H1>
           <HStack gap={16}>
             <LinkCTAButton primary href="/blog">
@@ -73,17 +72,17 @@ export default HeroMain;
 const Wrapper = styled.div`
   min-height: 60vh;
   display: flex;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 120px;
   @media only screen and (max-width: 1176px) {
-    padding-top: 96px;
+    padding-top: 72px;
   }
   @media only screen and (max-width: 796px) {
     margin-left: 32px;
     margin-right: 32px;
   }
   @media only screen and (max-width: 510px) {
-    padding-top: 72px;
+    padding-top: 48px;
   }
 `;
 

@@ -20,10 +20,10 @@ const StyledEmbossedText = styled.div<{ pixelSize?: number }>`
     top: 0;
     left: 0;
     ${(p) =>
-      createHatchedBackground({
-        mainColor: p.theme.material,
-        pixelSize: p.pixelSize || 1,
-      })}
+    createHatchedBackground({
+      mainColor: p.theme.material,
+      pixelSize: p.pixelSize || 1,
+    })}
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -50,8 +50,8 @@ const BaseFont = styled.span<{ color?: keyof Theme; disabled?: boolean }>`
     p.disabled
       ? p.theme.materialTextDisabled
       : p.color
-      ? p.theme[p.color]
-      : p.theme.materialText};
+        ? p.theme[p.color]
+        : p.theme.materialText};
   text-shadow: ${(p) =>
     p.disabled ? `1px 1px 0px ${p.theme.materialTextDisabledShadow}` : "none"};
   a {
@@ -180,6 +180,6 @@ const LogoText = styled.div`
 
 export const ExpensiveToys = () => (
   <LogoText>
-    <T.Embossed>expensive.toys</T.Embossed>
+    <T.Embossed>danish.haroon</T.Embossed>
   </LogoText>
 );

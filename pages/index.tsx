@@ -9,7 +9,7 @@ import Head from "next/head";
 const Home = () => (
   <>
     <Head>
-      <title>Artur Bień</title>
+      <title>Danish Haroon</title>
       <meta
         name="google-site-verification"
         content="77WkCNrItg2AyQU1WYDoD06BaXWBmCIjjzzvZzLwnVw"
@@ -20,23 +20,23 @@ const Home = () => (
       <meta property="og:image:height" content="675" />
 
       {/* <meta name="description" content={frontMatter.abstract} /> */}
-      <meta name="og:title" content={"Artur Bień"} />
+      <meta name="og:title" content={"Danish Haroon"} />
       <meta
         name="og:description"
-        content={"Building user interfaces for fun."}
+        content={"figuring out the edges of whats possible"}
       />
       {/* <meta name="og:image" content={frontMatter.heroImg} /> */}
       {/* <meta name="og:image:alt" content={frontMatter.heroImg} /> */}
 
-      <meta name="twitter:title" content={"Artur Bień"} />
+      <meta name="twitter:title" content={"Danish Haroon"} />
       <meta
         name="twitter:description"
-        content={"Building user interfaces for fun."}
+        content={"figuring out the edges of whats possible"}
       />
       {/* <meta name="twitter:image" content={frontMatter.heroImg} /> */}
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@artur_bien" />
+      <meta name="twitter:creator" content="@danishhharoon" />
     </Head>
     <Center>
       <HeroMain />

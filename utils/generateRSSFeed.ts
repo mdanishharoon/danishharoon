@@ -9,19 +9,19 @@ export default async function generateRssFeed() {
 
   // TODO: image_url
   const feedOptions = {
-    title: "Blog | Artur Bień",
+    title: "Blog | Danish Haroon",
     description: "Cool experiments and articles about React and CSS.",
     language: "en-us",
     site_url: SITE_URL,
     feed_url: `${SITE_URL}/rss.xml`,
     // image_url: `${SITE_URL}/logo.png`,
     pubDate: new Date(),
-    copyright: `All rights reserved ${new Date().getFullYear()}, Artur Bień`,
+    copyright: `All rights reserved ${new Date().getFullYear()}, Danish Haroon`,
   };
   const feed = new RSS(feedOptions);
 
   // TODO: categody for each post (tags)?
-  const author = "Artur Bień";
+  const author = "Danish Haroon";
   const articlesItems = allArticles.map((post) => {
     const url = `${SITE_URL}/blog/${post.slug}`;
     return {
@@ -30,7 +30,7 @@ export default async function generateRssFeed() {
       url,
       guid: url,
       date: post.frontmatter.publishedOn,
-      author: "Artur Bień",
+      author: "Danish Haroon",
     };
   });
   const toysItems = allToys.map((post) => {
@@ -42,7 +42,7 @@ export default async function generateRssFeed() {
       url,
       guid: url,
       date: post.frontmatter.publishedOn,
-      author: "Artur Bień",
+      author: "Danish Haroon",
     };
   });
   const feedItems = [...articlesItems, ...toysItems].sort(

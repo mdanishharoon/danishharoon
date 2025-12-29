@@ -30,12 +30,6 @@ module.exports = {
     })
   ),
   async redirects() {
-    return [
-      {
-        source: "/mandala",
-        destination: "https://mandala.expensive.toys/",
-        permanent: true,
-      },
-    ];
+    return [];
   },
 };

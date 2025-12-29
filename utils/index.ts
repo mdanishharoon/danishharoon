@@ -1,1 +1,1 @@
-export const SITE_URL = process.env.SITE_URL || "https://expensive.toys";
+export const SITE_URL = process.env.SITE_URL || "https://danishharoon.dev";

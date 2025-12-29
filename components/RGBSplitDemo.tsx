@@ -149,7 +149,7 @@ export const Interactive = () => {
             >
               <Image
                 src={ProfilePic}
-                alt="Artur Bień with a laptop"
+                alt="Danish Haroon"
                 style={{
                   filter: `url(#${filterId})`,
                   maxWidth: "100%",

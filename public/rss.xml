@@ -1,93 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title><![CDATA[Blog | Artur Bień]]></title>
+        <title><![CDATA[Blog | Danish Haroon]]></title>
         <description><![CDATA[Cool experiments and articles about React and CSS.]]></description>
-        <link>https://expensive.toys</link>
+        <link>https://danishharoon.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 28 Jun 2023 09:43:54 GMT</lastBuildDate>
-        <atom:link href="https://expensive.toys/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 28 Jun 2023 09:43:54 GMT</pubDate>
-        <copyright><![CDATA[All rights reserved 2023, Artur Bień]]></copyright>
+        <lastBuildDate>Mon, 29 Dec 2025 13:15:23 GMT</lastBuildDate>
+        <atom:link href="https://danishharoon.dev/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Mon, 29 Dec 2025 13:15:23 GMT</pubDate>
+        <copyright><![CDATA[All rights reserved 2025, Danish Haroon]]></copyright>
         <language><![CDATA[en-us]]></language>
+        <item>
+            <title><![CDATA[Animated blur overlay]]></title>
+            <description><![CDATA[Create cross-browser overlay with animated backdrop filter blur]]></description>
+            <link>https://danishharoon.dev/blog/animated-blur-overlay</link>
+            <guid isPermaLink="false">https://danishharoon.dev/blog/animated-blur-overlay</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Wed, 06 Sep 2023 19:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Digital Chromadynamica Manipulable]]></title>
+            <description><![CDATA[Digital version of the "Chromadynamica Manipulable" artwork by Felipe Pantone.]]></description>
+            <link>https://danishharoon.dev/toys/chromadynamica-manipulable</link>
+            <guid isPermaLink="false">https://danishharoon.dev/toys/chromadynamica-manipulable</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Sun, 23 Jul 2023 19:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Reactions]]></title>
             <description><![CDATA[Squishy and playful Reactions component with unique animation for each emoji.]]></description>
-            <link>https://expensive.toys/toys/reactions</link>
-            <guid isPermaLink="false">https://expensive.toys/toys/reactions</guid>
-            <dc:creator><![CDATA[Artur Bień]]></dc:creator>
-            <pubDate>Sun, 18 Jun 2023 22:00:00 GMT</pubDate>
+            <link>https://danishharoon.dev/toys/reactions</link>
+            <guid isPermaLink="false">https://danishharoon.dev/toys/reactions</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Sun, 18 Jun 2023 19:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Stickers]]></title>
             <description><![CDATA[Various styles UI stickers.]]></description>
-            <link>https://expensive.toys/toys/stickers</link>
-            <guid isPermaLink="false">https://expensive.toys/toys/stickers</guid>
-            <dc:creator><![CDATA[Artur Bień]]></dc:creator>
-            <pubDate>Thu, 15 Jun 2023 22:00:00 GMT</pubDate>
+            <link>https://danishharoon.dev/toys/stickers</link>
+            <guid isPermaLink="false">https://danishharoon.dev/toys/stickers</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Fri, 16 Jun 2023 19:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Blur Vignette effect in CSS]]></title>
             <description><![CDATA[Create Blur Vignette effects with pure CSS.]]></description>
-            <link>https://expensive.toys/blog/blur-vignette</link>
-            <guid isPermaLink="false">https://expensive.toys/blog/blur-vignette</guid>
-            <dc:creator><![CDATA[Artur Bień]]></dc:creator>
-            <pubDate>Sun, 11 Jun 2023 22:00:00 GMT</pubDate>
+            <link>https://danishharoon.dev/blog/blur-vignette</link>
+            <guid isPermaLink="false">https://danishharoon.dev/blog/blur-vignette</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Mon, 12 Jun 2023 19:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Magnifying Lens Tabs]]></title>
             <description><![CDATA[Magnifying Lens Tabs UI component inspired by Rolex Cyclop lens.]]></description>
-            <link>https://expensive.toys/toys/magnifying-lens-tabs</link>
-            <guid isPermaLink="false">https://expensive.toys/toys/magnifying-lens-tabs</guid>
-            <dc:creator><![CDATA[Artur Bień]]></dc:creator>
-            <pubDate>Tue, 25 Apr 2023 22:00:00 GMT</pubDate>
+            <link>https://danishharoon.dev/toys/magnifying-lens-tabs</link>
+            <guid isPermaLink="false">https://danishharoon.dev/toys/magnifying-lens-tabs</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Wed, 26 Apr 2023 19:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[New CSS masking technique - "Black Pixel Masking"]]></title>
+            <title><![CDATA[Using HTML elements as CSS masks]]></title>
             <description><![CDATA[Creating knockout / cutout or see-through effects using new CSS SVG filter masking technique.]]></description>
-            <link>https://expensive.toys/blog/black-pixel-masking</link>
-            <guid isPermaLink="false">https://expensive.toys/blog/black-pixel-masking</guid>
-            <dc:creator><![CDATA[Artur Bień]]></dc:creator>
-            <pubDate>Tue, 18 Apr 2023 22:00:00 GMT</pubDate>
+            <link>https://danishharoon.dev/blog/black-pixel-masking</link>
+            <guid isPermaLink="false">https://danishharoon.dev/blog/black-pixel-masking</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Tue, 18 Apr 2023 19:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Ambilight effect for the Web with CSS]]></title>
             <description><![CDATA[Use SVG filters to create the Ambilight Effect, which visually extends an element by illuminating area behind it.]]></description>
-            <link>https://expensive.toys/blog/ambilight-effect</link>
-            <guid isPermaLink="false">https://expensive.toys/blog/ambilight-effect</guid>
-            <dc:creator><![CDATA[Artur Bień]]></dc:creator>
-            <pubDate>Wed, 12 Apr 2023 22:00:00 GMT</pubDate>
+            <link>https://danishharoon.dev/blog/ambilight-effect</link>
+            <guid isPermaLink="false">https://danishharoon.dev/blog/ambilight-effect</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Wed, 12 Apr 2023 19:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[RGB split (3D Anaglyph) glitch effect with CSS SVG filter]]></title>
             <description><![CDATA[The RGB split effect, also known as RGB shift or 3D Anaglyph, is a popular visual effect that adds a sense of depth and dimensionality to images and videos.]]></description>
-            <link>https://expensive.toys/blog/css-rgb-split-effect</link>
-            <guid isPermaLink="false">https://expensive.toys/blog/css-rgb-split-effect</guid>
-            <dc:creator><![CDATA[Artur Bień]]></dc:creator>
-            <pubDate>Fri, 07 Apr 2023 22:00:00 GMT</pubDate>
+            <link>https://danishharoon.dev/blog/css-rgb-split-effect</link>
+            <guid isPermaLink="false">https://danishharoon.dev/blog/css-rgb-split-effect</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Fri, 07 Apr 2023 19:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Fancy reveal animations with CSS masks and @property]]></title>
             <description><![CDATA[Utilizing @property API to create fancy reveal effects by animating masks.]]></description>
-            <link>https://expensive.toys/blog/fancy-css-reveal-effects</link>
-            <guid isPermaLink="false">https://expensive.toys/blog/fancy-css-reveal-effects</guid>
-            <dc:creator><![CDATA[Artur Bień]]></dc:creator>
-            <pubDate>Mon, 03 Apr 2023 22:00:00 GMT</pubDate>
+            <link>https://danishharoon.dev/blog/fancy-css-reveal-effects</link>
+            <guid isPermaLink="false">https://danishharoon.dev/blog/fancy-css-reveal-effects</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Mon, 03 Apr 2023 19:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[CSS heat map and thermal vision effect (SVG filters)]]></title>
             <description><![CDATA[Leveraging the power of SVG filters to create advanced heat maps and thermal vision effect with CSS.]]></description>
-            <link>https://expensive.toys/blog/svg-filter-heat-map</link>
-            <guid isPermaLink="false">https://expensive.toys/blog/svg-filter-heat-map</guid>
-            <dc:creator><![CDATA[Artur Bień]]></dc:creator>
-            <pubDate>Wed, 08 Feb 2023 23:00:00 GMT</pubDate>
+            <link>https://danishharoon.dev/blog/svg-filter-heat-map</link>
+            <guid isPermaLink="false">https://danishharoon.dev/blog/svg-filter-heat-map</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Wed, 08 Feb 2023 19:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Create beautiful heat maps with only CSS]]></title>
             <description><![CDATA[A clever way to create heat map color grading with simple CSS.]]></description>
-            <link>https://expensive.toys/blog/pure-CSS-heatmap</link>
-            <guid isPermaLink="false">https://expensive.toys/blog/pure-CSS-heatmap</guid>
-            <dc:creator><![CDATA[Artur Bień]]></dc:creator>
-            <pubDate>Mon, 16 Jan 2023 23:00:00 GMT</pubDate>
+            <link>https://danishharoon.dev/blog/pure-CSS-heatmap</link>
+            <guid isPermaLink="false">https://danishharoon.dev/blog/pure-CSS-heatmap</guid>
+            <dc:creator><![CDATA[Danish Haroon]]></dc:creator>
+            <pubDate>Tue, 17 Jan 2023 19:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
