@@ -1,0 +1,51 @@
+---
+title: "Deal Co-Pilot - Agentic Due Diligence"
+subtitle: "SaaS Application, AI Agents"
+period: "Winter 2025"
+status: "Present"
+tags: ["LangChain", "Next.js", "Python", "FastAPI"]
+abstract: "A full-stack agentic AI platform that automates investment due diligence by orchestrating multiple research agents to generate investor-grade IC memos with real-time web citations."
+isPublished: true
+publishedOn: "2025-12-15"
+layout: "Toy"
+heroImg: ""
+heroImgAlt: ""
+seoTitle: "Deal Co-Pilot - AI Investment Research | Danish Haroon"
+---
+
+## Overview
+
+**Deal Co-Pilot** is a modern SaaS application designed to streamline the investment due diligence process. By leveraging an **agentic AI architecture**, the platform automates the gathering and synthesis of market data, competitor landscapes, and company specifics to produce comprehensive investment committee (IC) memos.
+
+## Technical Architecture
+
+* **Agentic Orchestration**: Implemented a multi-agent system using **LangChain** and **OpenAI/Gemini**. The system utilizes specialized agents for market sizing, competitive moats, and financial sentiment analysis.
+* **Real-time Web Intelligence**: Integrated **Tavily Search API** to provide agents with real-time browsing capabilities, ensuring all generated reports include verifiable citations and the latest market news.
+* **Full-Stack Implementation**: Built with a **Next.js 15** frontend for a reactive user experience and a **FastAPI** backend to handle long-running asynchronous research tasks.
+
+## Features
+
+* **Natural Language Input**: Users simply provide a company name and website to trigger a deep-dive research cycle.
+* **Dual-Model Support**: Support for both **OpenAI (GPT-4o)** for high-reasoning accuracy and **Gemini 1.5 Pro + Tavily** for cost-effective, high-volume research.
+* **Live Progress Tracking**: A WebSocket-enabled dashboard allows users to monitor the research agents' thoughts and progress in real-time.
+* **Professional IC Memos**: Generates formatted Markdown reports covering Market Dynamics, Competitive Landscapes, and Team Overviews.
+
+## Technical Implementation
+
+| Layer | Technology |
+| --- | --- |
+| **Frontend** | Next.js 15, Tailwind CSS, TypeScript |
+| **Backend** | FastAPI, Python 3.11 |
+| **AI Orchestration** | LangChain, Agentic Workflows |
+| **LLMs** | OpenAI GPT-4o, Google Gemini 1.5 Pro |
+| **Search Engine** | Tavily AI |
+| **Environment** | Docker, Vercel |
+
+## Key Outcomes
+
+* **Reduced Research Time**: Automated the initial 4-6 hours of manual market research into a 2-minute agentic workflow.
+* **Data Integrity**: Achieved 100% citation coverage for market claims by forcing agents to provide URL sources for every key metric.
+* **Modular Design**: Created a flexible backend where new research agents (e.g., ESG Agent or Regulatory Agent) can be plugged into the pipeline with minimal configuration.
+
+Demo : *deployment private for client
+Repo : [here](https://github.com/mdanishharoon/deal-copilot)

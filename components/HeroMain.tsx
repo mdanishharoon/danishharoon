@@ -9,13 +9,12 @@ import { HStack, VStack } from "./UI/Stack";
 import windowsWallpaper from "../public/windows-wallpaper.png";
 
 const PHRASES = [
-  "am figuring stuff out",
+  "do a bit of everything",
   "am waiting on my AWS CCP exam voucher",
   "am making pixels behave... mostly",
   "am breaking things(cursor is) and calling it learning",
   "am probably debugging (using cursor)",
   "am asking 'what if?' way too often",
-  "am convinced AI will take my job... ",
   "think inspiration has no schedule",
 ];
 

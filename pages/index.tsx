@@ -23,7 +23,7 @@ const Home = () => (
       <meta name="og:title" content={"Danish Haroon"} />
       <meta
         name="og:description"
-        content={"figuring out the edges of whats possible"}
+        content={"yup"}
       />
       {/* <meta name="og:image" content={frontMatter.heroImg} /> */}
       {/* <meta name="og:image:alt" content={frontMatter.heroImg} /> */}
@@ -31,7 +31,7 @@ const Home = () => (
       <meta name="twitter:title" content={"Danish Haroon"} />
       <meta
         name="twitter:description"
-        content={"figuring out the edges of whats possible"}
+        content={"yup"}
       />
       {/* <meta name="twitter:image" content={frontMatter.heroImg} /> */}
 

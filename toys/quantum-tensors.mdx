@@ -1,0 +1,46 @@
+---
+title: "Quantum Circuit Simulation via Tensor Networks"
+subtitle: "Parallel & Distributed Computing"
+period: "Spring 2025"
+status: "Completed"
+tags: ["Julia", "MPI", "OpenMP", "Quantum Computing"]
+abstract: "A high-performance quantum circuit simulation that leverages tensor network decomposition and hybrid parallelism (MPI + OpenMP) to simulate complex circuits across distributed clusters."
+isPublished: true
+publishedOn: "2025-05-15"
+layout: "Toy"
+heroImg: ""
+heroImgAlt: ""
+seoTitle: "Quantum Tensor Network Simulator | Danish Haroon"
+---
+
+## Overview
+
+Simulating quantum circuits is computationally expensive because the state space grows exponentially with the number of qubits. This project tackles that bottleneck by representing circuits as **Tensor Networks**.
+
+Instead of evolving a massive state vector, we treat the simulation as a **Tensor Contraction** problem. By partitioning the network and distributing the workload across multiple nodes, the simulator can handle larger circuit depths than traditional serial methods.
+
+## The Three-Phase Pipeline
+
+To optimize the contraction process, We implemented a structured three-phase pipeline focused on minimizing communication overhead and maximizing CPU utilization:
+
+1. **Community Detection (Graph Partitioning)**: Using **METIS**, the simulator analyzes the tensor graph to identify "communities", groups of tensors that are tightly coupled. By partitioning the graph here, we minimize the data that needs to be swapped between MPI nodes later.
+2. **Community Contraction (Hybrid Parallelism)**: Each identified community is assigned to an MPI process. Within those processes, I utilized **OpenMP** and **Julia threads** to perform the actual math (contraction) across all available CPU cores.
+3. **Global Merging**: Once the local communities are reduced to single tensors, the simulator performs a final coordinated contraction to produce the end result (amplitudes).
+
+## Technical Implementation
+
+| Component | Technology |
+| --- | --- |
+| **Language** | Julia (1.8+) |
+| **Distributed Computing** | MPI (via MPI.jl) |
+| **Shared Memory** | OpenMP & Native Julia Threads |
+| **Partitioning** | METIS |
+| **Tensor Math** | TensorOperations.jl |
+
+## Performance Insights
+
+* **Scalability**: By moving from a serial implementation to a distributed model, we significantly reduced the memory footprint per node, allowing for the simulation of wider circuits.
+* **Graph Optimization**: Implementing community detection proved vital; without it, the inter-node communication during the final merge phase created a bottleneck that negated the benefits of parallelism.
+* **Thread Efficiency**: Leveraged `ThreadsX.jl` for non-blocking operations, ensuring that the CPU remained saturated during heavy matrix multiplications.
+
+Repo : [here](https://github.com/mdanishharoon/quantum-tensor-simulator)

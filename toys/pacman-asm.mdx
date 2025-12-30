@@ -1,0 +1,45 @@
+---
+title: "Pacman-ASM - x86 Assembly Edition"
+subtitle: "Systems Programming, Low-Level Development"
+period: "Spring 2023"
+status: "Past"
+tags: ["x86 Assembly", "Irvine32", "Game Dev", "Low-Level"]
+abstract: "A fully functional recreation of the classic Pacman arcade game written entirely in x86 Assembly language, utilizing the Irvine32 library for hardware abstraction and console control."
+isPublished: true
+publishedOn: "2023-05-20"
+layout: "Toy"
+heroImg: ""
+heroImgAlt: ""
+seoTitle: "Pacman-ASM x86 Assembly | Danish Haroon"
+---
+
+## Overview
+
+Writing a game in Assembly is a labor of love and a test of patience. **Pacman-ASM** is a project I built during Spring 2023 that reimagines the classic arcade experience at the register level. I was able to gain a deep understanding of how software interacts directly with the CPU and memory.
+
+This project stands out as one of my most rewarding builds because it required managing every minute detail, from manual memory addressing to timing game ticks using hardware interrupts.
+
+## Technical Implementation
+
+* **Direct Memory Addressing**: Instead of objects and classes, every pellet, ghost, and wall was managed through direct memory offsets and data buffers.
+* **Irvine32 Library**: Leveraged the Irvine32 library to handle console output, color changes, and keyboard input polling without needing to write custom BIOS interrupts for every operation.
+* **Audio Integration**: Implemented sound effects (`pacman.wav`, `coin.wav`) by triggering system-level audio calls within the Assembly source, bringing the "arcade feel" to a low-level environment.
+* **Collision Detection**: Managed through coordinate comparison logic within the `EAX` and `EBX` registers.
+* **Movement**: Implemented using conditional jumps (`JMP`, `JE`, `JNE`) to evaluate user input and wall boundaries.
+
+## Project Highlights
+
+| Feature | Low-Level Mechanism |
+| --- | --- |
+| **Graphics** | ASCII-based rendering using direct console buffer manipulation. |
+| **Input** | Real-time polling of the keyboard buffer to prevent input lag. |
+| **Scoring** | Integer arithmetic performed directly in registers with memory-mapped storage. |
+| **Audio** | Procedure calls to external Windows API functions through the Irvine linker. |
+
+## Reflections
+
+This is easily one of the "nicest" things I've made because of the sheer craftsmanship involved. There are no "shortcuts" in x86; if you want a character to move, you have to manually calculate its new memory position, clear the old one, and redraw the pixel. It turned a simple game into a complex puzzle of registers and logic gates.
+
+## Repo Link
+
+Repo : [here](https://github.com/mdanishharoon/pacman-asm)

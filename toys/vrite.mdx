@@ -1,0 +1,44 @@
+---
+title: "Vrite - Collaborative Text Editor"
+subtitle: "Full-stack Real-time Collaboration"
+period: "Fall 2024"
+status: "Past"
+tags: ["Next.js", "Liveblocks", "Convex", "TypeScript"]
+abstract: "A modern full-stack collaborative text editor featuring real-time presence, multi-user editing, and serverless persistence using Tiptap and Liveblocks."
+isPublished: true
+publishedOn: "2024-11-30"
+layout: "Toy"
+heroImg: ""
+heroImgAlt: ""
+seoTitle: "Vrite - Collaborative Text Editor | Danish Haroon"
+---
+
+## Overview
+
+Vrite is a modern full-stack collaborative text editor built with **Next.js**, powered by **Tiptap**, **Liveblocks**, **Convex**, and **Clerk**. Designed for real-time collaboration, authentication, and cloud persistence, Vrite enables seamless team writing and editing with live synchronization.
+
+## Features
+
+* **Authentication**: Secure user authentication and session management via Clerk.
+* **Rich Text Editing**: Feature-rich editor experience powered by Tiptap, supporting various formatting and extensions.
+* **Real-Time Collaboration**: Live cursors, multi-user editing, and presence synchronization using Liveblocks.
+* **Serverless Backend**: Reactive storage and database management using Convex for low-latency data fetching.
+* **Document Management**: Capabilities to create, rename, and organize multiple documents per user with instant auto-save.
+
+## Technical Implementation
+
+| Layer | Technology |
+| --- | --- |
+| **Frontend** | Next.js (App Router), Tailwind CSS, Tiptap |
+| **Auth** | Clerk |
+| **Real-time** | Liveblocks |
+| **Backend / DB** | Convex |
+| **State Sync** | Liveblocks + Convex |
+| **Hosting** | Vercel (Frontend), Convex Cloud (Backend) |
+
+## Performance & Scalability
+
+By leveraging a serverless architecture, Vrite handles document state transitions through **Convex** mutations, ensuring that all collaborators stay in sync without manual refreshes. The integration of **Liveblocks** provides a WebSocket-based layer for ephemeral data like cursor positions, reducing the load on the primary database while maintaining a highly responsive user interface.
+
+Demo : [here](https://vrite-docs.vercel.app)
+Repo : [here](https://github.com/danishharoon/Vrite)

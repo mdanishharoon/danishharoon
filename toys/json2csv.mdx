@@ -1,0 +1,47 @@
+---
+title: "JSON to Relational CSV Converter"
+subtitle: "Systems Programming, Compilers"
+period: "Spring 2025"
+status: "Completed"
+tags: ["C", "Bison", "Flex", "GLib"]
+abstract: "A high-performance CLI tool that parses complex JSON data and flattens it into a relational database-style schema, generating multiple linked CSV files with primary and foreign key integrity."
+isPublished: true
+publishedOn: "2025-03-20"
+layout: "Toy"
+heroImg: ""
+heroImgAlt: ""
+seoTitle: "JSON to Relational CSV Converter | Danish Haroon"
+---
+
+## Overview
+
+Working with deeply nested JSON in relational tools can be a headache. This project is a command-line utility designed to solve that by decomposing JSON structures into a set of normalized CSV tables. It doesn't just flatten the data; it infers a schema, assigns unique IDs, and maintains relationships through foreign keys.
+
+## Technical Implementation
+
+* **Compiler Toolchain**: Built using **Flex** for lexical analysis and **Bison** for context-free grammar parsing. This ensures strict adherence to JSON standards while providing precise error reporting (line/column numbers).
+* **Relational Mapping**: Developed a custom algorithm to traverse the **Abstract Syntax Tree (AST)** and identify repeating patterns.
+* **Objects**: Grouped into tables based on key-set similarity.
+* **Nested Arrays**: Decomposed into child tables with a `<parent>_id` reference.
+* **Scalar Arrays**: Converted into junction tables to handle many-to-one relationships without duplicating parent data.
+
+## Key Features
+
+* **Schema Inference**: Automatically detects table structures based on JSON object keys.
+* **Relational Integrity**: Every row is assigned a primary key, and nested elements are automatically linked via foreign keys.
+* **Robust CSV Formatting**: Handles edge cases like null values, nested quotes, and multi-line strings according to standard CSV RFCs.
+* **AST Visualization**: Includes a debug mode to print the Abstract Syntax Tree, useful for verifying the parsing logic of complex files.
+
+## Technical Stack
+
+| Category | Tool / Library |
+| --- | --- |
+| **Language** | C (C99 Standard) |
+| **Lexer** | Flex |
+| **Parser** | Bison |
+| **Data Structures** | GLib-2.0 |
+| **Build System** | GNU Make |
+
+## Repo Link
+
+Repo : [here](https://github.com/mdanishharoon/json2csv)

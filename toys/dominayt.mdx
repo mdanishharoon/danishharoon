@@ -1,0 +1,48 @@
+---
+title: "Dominayt! - Multi-Player Socket Game"
+subtitle: "Network Programming, Game Development"
+period: "Fall 2023"
+status: "Past"
+tags: ["Python", "PyGame", "Sockets", "Concurrency"]
+abstract: "A fast-paced multi-player arcade game built with Python Sockets and PyGame, where players compete for central territory while dodging dynamic obstacles in a synchronized network environment."
+isPublished: true
+publishedOn: "2023-09-20"
+layout: "Toy"
+heroImg: ""
+heroImgAlt: ""
+seoTitle: "Dominayt - Socket-based Multi-player Game | Danish Haroon"
+---
+
+## Overview
+
+Dominayt is a real-time multi-player game that blends territory control with "bullet-hell" dodging mechanics. The project serves as a practical exploration of low-level network programming, requiring high-frequency state synchronization between a server and multiple clients to ensure a fair and responsive gameplay experience.
+
+## Gameplay Mechanics
+
+The objective is twofold:
+
+1. **Domination**: Players must reach and stay within the center of the game grid to accumulate points.
+2. **Evasion**: A central cannon fires bullets at players; getting hit resets your progress or position, forcing a balance between aggressive point-scoring and defensive movement.
+
+## Technical Implementation
+
+* **Socket Programming**: Implemented a custom communication protocol using Python's `socket` library. The server acts as the "source of truth," managing player coordinates, bullet trajectories, and collision logic.
+* **Concurrency**: Used multi-threading on the server side to handle multiple simultaneous client connections without blocking the main game loop.
+* **State Synchronization**: Developed a serialized data exchange format to broadcast the positions of all players and projectiles across the network at 60 frames per second.
+* **Client-Side Rendering**: Built the visual interface using **PyGame**, transforming raw coordinate data from the server into a smooth graphical experience.
+
+## Project Structure
+
+| File | Responsibility |
+| --- | --- |
+| **`server.py`** | Coordinates game logic, handles client connections, and broadcasts state updates. |
+| **`client.py`** | Renders the UI, captures user input, and communicates with the server. |
+| **`my_classes.py`** | Contains OOP definitions for Players, Bullets, and Game Grids. |
+
+## Key Challenges
+
+One of the primary hurdles was managing **network latency**. To prevent players from "teleporting" due to lag, I implemented basic client-side interpolation and optimized the data pickles to be as lightweight as possible, ensuring that the game felt "snappy" even with multiple players on the grid.
+
+## Repo Link
+
+Repo : [here](https://github.com/mdanishharoon/dominayt)
